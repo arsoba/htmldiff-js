@@ -4,7 +4,7 @@ const whitespaceRegex = /^(\s|&nbsp;)+$/;
 const wordRegex = /[\w\#@]+/;
 
 const specialCaseWordTags = [
-    '<img',
+    '<img', '<input'
 ];
 
 function isTag(item) {

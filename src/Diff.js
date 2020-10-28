@@ -56,6 +56,8 @@ class HtmlDiff {
             this.performOperation(item);
         }
 
+        console.log(this.content)
+
         return this.content.join('');
     }
 
@@ -66,10 +68,16 @@ class HtmlDiff {
     splitInputsIntoWords() {
         this.oldWords = WordSplitter.convertHtmlToListOfWords(this.oldText, this.blockExpressions);
 
+        console.log(this.oldWords)
+
+
         //free memory, allow it for GC
         this.oldText = null;
 
         this.newWords = WordSplitter.convertHtmlToListOfWords(this.newText, this.blockExpressions);
+
+        console.log(this.newWords)
+
 
         //free memory, allow it for GC
         this.newText = null;
